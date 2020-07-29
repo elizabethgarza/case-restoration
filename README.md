@@ -1,11 +1,16 @@
 
 #TODOs 
-
-- on branch 'training-script' 
-  - add 'features.py' 
-  - add 'case.py' 
-  - create a new file, titled 'train.py' and start drafting the architecture of this script. 
  
-  
 - on branch 'evaluation-script' 
+  - study KG's utils script.
+  - write an evaluation script that calculates baseline accuracy and token accuracy and anything else.
+
+- on branch 'optimize-split-script' 
+  - insert time.time() functions to figure out which line is taking so long. 
+  
+- on branch 'experiment run-through' 
+  - run through one version of the experiment 
+  
+- on branch 'README' 
+  - write everything up. 
   
