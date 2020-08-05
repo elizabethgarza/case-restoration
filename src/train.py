@@ -19,6 +19,7 @@ def _extract_train(train_sourcepath):
         mc_dict = {}
         tok_sents = []
         folded_tok_sents = []
+        pattern_counts = collections.defaultdict(collections.Counter)
         for line in source: 
             tok_sent = line.split()
             toks = []
@@ -32,7 +33,6 @@ def _extract_train(train_sourcepath):
         for tok_sent, folded_tok_sent in zip(tok_sents, folded_tok_sents):
             sfs = features.extract_features(folded_tok_sent)
             tc_and_sfs = []
-            pattern_counts = collections.defaultdict(collections.Counter)
             for tok, feat in zip(tok_sent, sfs): 
                 tc = case.get_tc(tok)[0].name
                 pattern = case.get_tc(tok)[1]
