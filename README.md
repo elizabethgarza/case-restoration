@@ -1,7 +1,7 @@
 
 #TODOs 
  
-- on branch 'evaluation-script' 
+- on branch 'evaluation.py' 
   - study KG's utils script.
   - write an evaluation script that calculates baseline accuracy and token accuracy and anything else.
 
