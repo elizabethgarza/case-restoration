@@ -12,14 +12,16 @@ from typing import List
 import case 
 import features
 
+os.chdir('..')
+os.chdir('data')
 
 def _extract_train(train_sourcepath):
 
     with open(train_sourcepath, 'r') as source, open('train_feats.txt', 'w') as sink: 
         mc_dict = {}
+        pattern_counts = collections.defaultdict(collections.Counter)
         tok_sents = []
         folded_tok_sents = []
-        pattern_counts = collections.defaultdict(collections.Counter)
         for line in source: 
             tok_sent = line.split()
             toks = []
@@ -43,10 +45,10 @@ def _extract_train(train_sourcepath):
             for tc_and_sf in tc_and_sfs: 
                 print('\t'.join(tc_and_sf), file=sink)
             print(file=sink)
-            for folded_tok, pattern_counts in pattern_counts.items(): 
-                tok, count = pattern_counts.most_common(1)[0]
+            for folded_tok, pattern_count in pattern_counts.items(): # e.g.-- `former Counter({'former': 169, 'Former': 24})`
+                tok, count = pattern_count.most_common(1)[0]
                 if count > 2: 
-                    mc_dict[tok.casefold()] = case.get_tc(tok)[1]
+                    mc_dict[folded_tok] = tok
         mc_dict = json.dumps(mc_dict)
         with open('mc_dict.json', 'w') as sink: 
             sink.write(mc_dict) 
@@ -111,7 +113,7 @@ def main(args):
     # removes the two files with the preprocessed data
     os.remove('train_feats.txt')
     os.remove('dev_feats.txt')
-
+    
 if __name__=='__main__': 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('train_sourcepath', help = 'path to train')
@@ -121,6 +123,8 @@ if __name__=='__main__':
     main(args)
 
     
+            
+
             
 
 
