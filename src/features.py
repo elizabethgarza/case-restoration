@@ -3,7 +3,6 @@ Extracts suffix and word context features.
 """
 
 
-
 def suff_features(token):
     
     if len(token)>3: 
