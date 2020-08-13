@@ -1,7 +1,7 @@
 This README.md is adapted from [Kyle Gorman](kgorman@gc.cuny.edu), [M. Elizabeth
 Garza](garza.elizabeth9@gmail.com), and [Emily
 Campbell's](ecampbell4@gradcenter.cuny.edu)
-README.md from [`CUNY-CL/WinterCamp`]()
+README.md from [`CUNY-CL/WinterCamp`](https://github.com/CUNY-CL/WinterCamp)
 
 # Purpose
 
