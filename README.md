@@ -19,6 +19,23 @@ Lita et al. (2003) introduce a task they call "true-casing". They use a simple m
 
 # Software requirements
 
+This experiment assumes you have access to a UNIX-style command line interface:
+
+-   On Windows 10, you access a command line using [Windows Subsystem for
+    Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10); the
+    Ubuntu "distro" (distribution) is particularly easy to use.
+-   On Mac OS X, you can access the command line interface by opening
+    Terminal.app.
+
+It also assumes that you have Python 3.6 or better installed. To test, run
+`python --version` from the command line, and note the version number that it
+prints. If this returns an error, you probably don't have Python installed yet.
+One easy way to obtain a current version of Python is to install
+[Anaconda](https://docs.anaconda.com/anaconda/install), a free software package.
+Note that if you're using Anaconda from within Windows Subsystem for Linux, you
+will want to install the Linux version, not the Windows version.
+
+
 
 
   
