@@ -17,5 +17,8 @@ In most cases, speech and language processing systems, including machine transla
 
 Lita et al. (2003) introduce a task they call "true-casing". They use a simple machine learning model, a hidden Markov model, to predict the capitalization patterns of sentences, word by word. They obtain good overall accuracy (well about 90% accurate) when applying this method to English news text.
 
+# Software requirements
+
+
 
   
