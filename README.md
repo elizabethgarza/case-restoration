@@ -1,16 +1,10 @@
 
-#TODOs 
- 
-- on branch 'evaluation.py' 
-  - study KG's utils script.
-  - write an evaluation script that calculates baseline accuracy and token accuracy and anything else.
+# Purpose
 
-- on branch 'optimize-split-script' 
-  - insert time.time() functions to figure out which line is taking so long. 
-  
-- on branch 'experiment run-through' 
-  - run through one version of the experiment 
-  
-- on branch 'README' 
-  - write everything up. 
+The purpose of this experiment is to 
+- restore missing capitalization in noisy user-generated text as is often found in text messages (SMS) or posts on social media, or even
+- add capitalization to the output of machine translation and speech recognition to make them easier for humans to read, or even
+- transfer the "style" of casing from one collection of documents to another.
+
+# 
   
